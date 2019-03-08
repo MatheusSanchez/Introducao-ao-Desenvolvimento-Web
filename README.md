@@ -1,2 +1,2 @@
-# Introducao-ao-Desenvolvimento-Web
-Introdução ao Desenvolvimento Web (SCC0219)
+# Introdução ao Desenvolvimento Web
+Códigos e projetos solicitados na disciplina de Introdução ao Desenvolvimento Web I (SCC0219),5º semestre,no curso de Bacharelado em Ciências de Computação - ICMC USP.
