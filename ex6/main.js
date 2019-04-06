@@ -6,9 +6,37 @@ var overlay = document.querySelector('.overlay');
 
 /* Looping through images */
 
+for(var i = 1; i <= 5; i++) {
   var newImage = document.createElement('img');
-  newImage.setAttribute('src', xxx);
+  newImage.setAttribute('src', 'images/pic' + i + '.jpg'); /*nome das imagens na pasta*/ 
   thumbBar.appendChild(newImage);
+  newImage.onclick = function(e) {
+    var imgSrc = e.target.getAttribute('src');
+    displayImage(imgSrc);
+  }
+}
+
+function displayImage(imgSrc) {
+  displayedImage.setAttribute('src', imgSrc);
+}
+
 
 /* Wiring up the Darken/Lighten button */
 
+
+
+btn.onclick = function() { /*tag button*/ 
+
+  var btnClass = btn.getAttribute('class'); 
+
+  if(btnClass === 'dark') {         /*troca o class dependendo do estado */
+    btn.setAttribute('class','light');
+    btn.textContent = 'Lighten';    /*troca o que ta escrito no botão*/
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+  } else {
+    btn.setAttribute('class','dark');
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+  }
+
+}
